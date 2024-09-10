@@ -1,0 +1,24 @@
+:root {
+    --purple: rgb(116, 119, 191);
+    --light-purple: rgb(213, 214, 236);
+    --dark-purple: #4d4c72;
+    --green: #81c98f;
+    --blue: #51b6c8;
+    --gray: #999999;
+    --light-gray: #c0c0c0;
+    --light-gray2: #f5f5f5;
+    --white: #FFFFFF;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+nav {
+   .nav-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 10%;
+   }
+    svg {
+        margin: 1rem 0.8rem;
+    }
+}
