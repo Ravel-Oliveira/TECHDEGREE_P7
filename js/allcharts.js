@@ -21,7 +21,7 @@ new Chart(traffic, {
   },
   options: {
     maintainAspectRatio: false,
-    aspectRatio: 1/1,
+    // aspectRatio: 1/1,
     plugins: {
       legend: {
         display: false
