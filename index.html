@@ -11,7 +11,7 @@
     <div class="main-wrapper">
         <header>
             <div class="logo">
-                <p><strong>Web</b>App&#8482</p>
+                <p><b>Web</b>App&#8482</p>
             </div>
             <div class="acc-wrapper">
                 <div class="alert"></div>
@@ -40,14 +40,33 @@
             </div>
         </nav>
 
-        <main>
+        <div class="dashboard-wrapper">
             <div class="alert">
-                <h3>Alert: You have unread message</h3>
+                <p>Alert: You have unread message</p>
             </div>
-            <div class="traffic-wrapper">
+            <div class="tchart-menu">
+                <h3>TRAFFIC</h3>
+                <div class="chart-menu">
+                    <button class="btn hourly">Hourly</button>
+                    <button class="btn hourly">Daily</button>
+                    <button class="btn hourly">Weekly</button>
+                    <button class="btn hourly">Monthly</button>
+                </div>
+            </div>
+            <div class="tchart-wrapper">
                 <canvas id="traffic-chart"></canvas>
             </div>
-        </main>
+            <div class="daily-mobile">
+                <div class="dtraffic-wrapper">
+                    <h3>DAILY TRAFFIC</h3>
+                    <canvas id="daily-chart"></canvas>
+                </div>
+                <div class="mtraffic-wrapper">
+                    <h3>MOBILE USERS</h3>
+                    <canvas id="mobile-chart"></canvas>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
