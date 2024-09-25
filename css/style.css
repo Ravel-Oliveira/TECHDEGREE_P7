@@ -61,14 +61,18 @@ header {
     }
 }
 
+
+/* nav styles */
 nav {
     .nav-wrapper {
     display: flex;
     justify-content: center;
-    margin: 0 10%;
+    padding: 0 10%;
+    background-color: var(--dark-purple);
     }
     svg {
         margin: 1rem 0.8rem;
+        fill: var(--white);
     }
 }
 
