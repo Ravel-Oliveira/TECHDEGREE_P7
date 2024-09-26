@@ -204,8 +204,6 @@ nav {
     gap: 4px;
 }
 
-
-
 .svg-container {
     height: 65px;
     width: 65px;
@@ -216,6 +214,35 @@ nav {
         fill: var(--white)
     }
 }
+
+/* New members section style */
+.new-members .member:nth-child(n+3),
+.recent-activity .member:nth-child(n+3) {
+    border: 1px solid var(--light-gray);
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+    img {
+        height: 72px;
+        width: 72px;
+        border-radius: 50%;
+    }
+    p {
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
+    .email {
+        color: var(--purple);
+    }
+}
+
+
+
 
 
 /* Initial code From Uiverse.io by Muaz-Aldalil */ 
