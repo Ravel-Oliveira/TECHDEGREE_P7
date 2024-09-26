@@ -11,6 +11,20 @@
     font-family: 'Roboto', serif;
 }
 
+body {
+    background-color: var(--light-gray2);
+}
+
+b{
+    font-weight: 500;
+}
+
+h3 {
+    padding: 12px;
+    font-weight: 500;
+}
+
+
 /* header styles */
 header {
     display: flex;
@@ -76,6 +90,87 @@ nav {
     }
 }
 
+/* Dashboard menu style */
+.tab-nav {
+    display: flex;
+    height: 48px;
+    width: 108px;
+    background-color: var(--white);
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid var(--light-gray);
+    position: relative;
+    z-index: 2;
+}
+
+.dashboard-wrapper {
+    /* display: flex;
+    flex-direction: column; */
+    box-shadow: 0px -1px var(--light-gray);
+    background-color: var(--white);
+    padding-top: 1px;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin: 12px;
+    background-color: var(--purple);
+    height: 36px;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 300;
+}
+
+/* Traffic chart menu style */
+.tchart-menu {
+    display: flex;
+    flex-direction: column;
+    .chart-menu {
+        display: flex;
+        margin: 0 14px;
+    }
+    p {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
+
+.box-hourly,
+.box-daily,
+.box-weekly,
+.box-monthly {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 28px;
+    padding: 12px;
+    height: 28px;
+}
+
+.hourly:checked+.box-hourly,
+.daily:checked+.box-daily,
+.weekly:checked+.box-weekly,
+.monthly:checked+.box-monthly {
+    background-color: var(--green);
+}
+
+
+/* Section styles */
+.tchart-wrapper,
+.dtchart-wrapper,
+.mtchart-wrapper {
+    padding: 14px;
+}
+
+.dtchart-wrapper,
+.mtchart-wrapper {
+    border-top: 1px solid var(--light-gray);
+}
+
+/* Social section style */
 .facebook,
 .instagram,
 .twitter {
@@ -85,20 +180,46 @@ nav {
     border: solid 1px var(--light-gray);
     color: var(--dark-purple);
     padding: 1rem;
-    height: 120px;
+    height: 100px;
     margin: 1rem;
-    
-    svg {
-        fill: var(--dark-purple);
+    p {
+        color: var(--purple);
+        font-weight: 500;
+        font-size: 1.2rem;
     }
+    h1 {
+        color: var(--gray);
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+}
+
+.fb-data,
+.insta-data,
+.twitter-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
+    gap: 4px;
 }
 
 
 
+.svg-container {
+    height: 65px;
+    width: 65px;
+    background-color: var(--purple);
+    border-radius: 50%;
+    padding: 1rem;
+    svg {
+        fill: var(--white)
+    }
+}
 
 
 /* Initial code From Uiverse.io by Muaz-Aldalil */ 
-.toggle-checkbox {
+.checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -114,24 +235,24 @@ nav {
     position: relative;
     transition: 0.3s;
     cursor: pointer;
+    &::before {
+        content: "";
+        background-color: white;
+        border: 2px solid var(--light-gray);
+        width: 18px;
+        height: 18px;
+        position: absolute;
+        border-radius: 50%;
+        top: 3px;
+        left: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ddd;
+        transition: 0.3s;
+    }
 }
 
-.toggle-switch::before {
-    content: "";
-    background-color: white;
-    border: 2px solid var(--light-gray);
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    border-radius: 50%;
-    top: 3px;
-    left: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ddd;
-    transition: 0.3s;
-}
 
 .on-off::before {
     content: "OFF";
@@ -148,27 +269,24 @@ nav {
     /* transition: 0.3s; */
 }
 
-.toggle-checkbox:checked+.toggle-switch {
+.toggle:checked+.toggle-switch {
     background-color: var(--purple);
-}
-
-.toggle-checkbox:checked+.toggle-switch .on-off::before {
-    content: "ON";
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
-    /* transition: 0.3s; */
-}
-
-.toggle-checkbox:checked+.toggle-switch::before {
-    content: "";
-    left: 48px;
-    color: var(--purple);
+    .on-off::before {
+        content: "ON";
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--white);
+    }
+    &::before {
+        content: "";
+        left: 48px;
+        color: var(--purple);
+    }
 }
