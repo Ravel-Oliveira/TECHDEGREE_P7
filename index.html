@@ -217,51 +217,53 @@
                     <div class="message">
                         <input type="text" id="search" name="search" placeholder="Search User" required>
                         <textarea name="user-message" id="user-message" placeholder="Message for user" rows="5"></textarea>
-                        <button class="btn message">SEND</button>
+                        <button class="btn message" type="submit">SEND</button>
                     </div>
                 </div>
                 <div class="setting-wrapper border pad">
                     <h3>SETTING</h3>
-                    <div class="email-toggle">
-                        <p>Send Email Notification</p>
-                        <label>
-                            <input type="checkbox" class="checkbox toggle">
-                            <div class="toggle-switch"><span class="on-off"></span></div>
-                        </label>
-                    </div>
-                    <div class="profile-toggle">
-                        <p>Set Profile to Public</p>
-                        <label>
-                            <input type="checkbox" class="checkbox toggle">
-                            <div class="toggle-switch"><span class="on-off"></span></div>
-                        </label>
-                    </div>
-                    <select name="timezone" id="timezone" class="zone" required>
-                        <option value="" selected disabled hidden>Select Timezone</option>
-                        <option value="UTC+0">UTC+0</option>
-                        <option value="UTC-7">UTC-7</option>
-                        <option value="UTC-6">UTC-6</option>
-                        <option value="UTC-5">UTC-5</option>
-                        <option value="UTC-4">UTC-4</option>
-                        <option value="UTC-3">UTC-3</option>
-                        <option value="UTC-2">UTC-2</option>
-                        <option value="UTC-1">UTC-1</option>
-                        <option value="UTC+1">UTC+1</option>
-                        <option value="UTC+2">UTC+2</option>
-                        <option value="UTC+3">UTC+3</option>
-                        <option value="UTC+4">UTC+4</option>
-                        <option value="UTC+5">UTC+5</option>
-                        <option value="UTC+6">UTC+6</option>
-                        <option value="UTC+7">UTC+7</option>
-                        <option value="UTC+8">UTC+8</option>
-                        <option value="UTC+9">UTC+9</option>
-                        <option value="UTC+10">UTC+10</option>
-                        <option value="UTC+11">UTC+11</option>
-                        <option value="UTC+12">UTC+12</option>
-                    </select>
-                    <div class="btn-wrapper">
-                        <button class="btn save">SAVE</button>
-                        <button class="btn cancel">CANCEL</button>
+                    <div class="sett-wrapper">
+                        <div class="email-toggle">
+                            <p>Send Email Notification</p>
+                            <label>
+                                <input type="checkbox" class="checkbox toggle">
+                                <div class="toggle-switch"><span class="on-off"></span></div>
+                            </label>
+                        </div>
+                        <div class="profile-toggle">
+                            <p>Set Profile to Public</p>
+                            <label>
+                                <input type="checkbox" class="checkbox toggle">
+                                <div class="toggle-switch"><span class="on-off"></span></div>
+                            </label>
+                        </div>
+                        <select name="timezone" id="timezone" class="zone" required>
+                            <option value="" selected disabled hidden>Select Timezone</option>
+                            <option value="UTC+0">UTC+0</option>
+                            <option value="UTC-7">UTC-7</option>
+                            <option value="UTC-6">UTC-6</option>
+                            <option value="UTC-5">UTC-5</option>
+                            <option value="UTC-4">UTC-4</option>
+                            <option value="UTC-3">UTC-3</option>
+                            <option value="UTC-2">UTC-2</option>
+                            <option value="UTC-1">UTC-1</option>
+                            <option value="UTC+1">UTC+1</option>
+                            <option value="UTC+2">UTC+2</option>
+                            <option value="UTC+3">UTC+3</option>
+                            <option value="UTC+4">UTC+4</option>
+                            <option value="UTC+5">UTC+5</option>
+                            <option value="UTC+6">UTC+6</option>
+                            <option value="UTC+7">UTC+7</option>
+                            <option value="UTC+8">UTC+8</option>
+                            <option value="UTC+9">UTC+9</option>
+                            <option value="UTC+10">UTC+10</option>
+                            <option value="UTC+11">UTC+11</option>
+                            <option value="UTC+12">UTC+12</option>
+                        </select>
+                        <div class="btn-wrapper">
+                            <button class="btn save">SAVE</button>
+                            <button class="btn cancel">CANCEL</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,11 @@
 :root {
     --purple: rgb(116, 119, 191);
+    --purple-opacity: rgb(116, 119, 191, 0.8);
     --light-purple: rgb(213, 214, 236);
     --dark-purple: #4d4c72;
     --green: #81c98f;
     --blue: #51b6c8;
-    --gray: #999999;
+    --gray: rgb(153, 153, 153);
     --light-gray: #c0c0c0;
     --light-gray2: #f5f5f5;
     --white: #FFFFFF;
@@ -164,7 +165,7 @@ nav {
 }
 
 .pad {
-    padding: 12px;
+    padding: 1rem;
 }
 
 /* Social section style */
@@ -213,11 +214,6 @@ nav {
 }
 
 /* New members section style */
-/* .new-members,
-.recent-activity {
-    padding: 0px 12px;
-} */
-
 .new-members .member:nth-child(n+3),
 .recent-activity .member:nth-child(n+3) {
     border-top: 1px solid var(--light-gray);
@@ -243,11 +239,66 @@ nav {
     }
 }
 
+/* Message user Style */
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#search,
+#user-message {
+    background-color: var(--light-gray2);
+    border: 2px solid rgb(153, 153, 153, 0.4);
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--gray);
+}
 
 
+#search::placeholder,
+#user-message::placeholder {
+    color: var(--light-gray);
+}
 
+.btn {
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--purple);
+    align-items: center;
+    box-shadow: 0px 0px 3px var(--gray), 0 2px var(--light-gray);
+    &:hover{
+        background-color: var(--purple-opacity);
+    }
+    &:active {
+        background-color: var(--dark-purple);
+        box-shadow: 0 1px #666;
+        transform: translateY(1px);
+    }
+}
 
-/* Initial code From Uiverse.io by Muaz-Aldalil */ 
+/* Setting style */
+.sett-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.email-toggle,
+.profile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    p {
+        font-weight: 400;
+    }
+}
+
+/* Switch toogle style
+Initial code From Uiverse.io by Muaz-Aldalil  */
 .checkbox {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -295,7 +346,6 @@ nav {
     justify-content: center;
     align-items: center;
     color: #ddd;
-    /* transition: 0.3s; */
 }
 
 .toggle:checked+.toggle-switch {
@@ -317,5 +367,33 @@ nav {
         content: "";
         left: 48px;
         color: var(--purple);
+    }
+}
+
+.zone {
+    background-color: var(--light-gray2);
+    border: 2px solid rgb(153, 153, 153, 0.4);
+    border-radius: 5px;
+    color: var(--gray);
+}
+
+select {
+    padding: 12px;
+    &:required:invalid {
+        color: var(--light-gray);
+    }
+}
+
+option, select:required:valid {
+    color: var(--dark-purple);
+    font-weight: 500;;
+}
+
+.btn-wrapper {
+    display: flex;
+    gap: 1rem;
+    .btn {
+        flex: 1;
+
     }
 }
