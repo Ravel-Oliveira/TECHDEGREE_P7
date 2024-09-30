@@ -21,7 +21,7 @@ new Chart(traffic, {
   },
   options: {
     maintainAspectRatio: false,
-    // aspectRatio: 1/1,
+    // aspectRatio: 1/2,
     plugins: {
       legend: {
         display: false
@@ -47,6 +47,9 @@ new Chart(daily, {
   }]
   },
   options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    // aspectRatio: 2/1,
     plugins: {
       legend: {
         display: false
@@ -74,7 +77,8 @@ new Chart(mobile, {
       hoverOffset: 4
     }]
   },
-  options: {   
+  options: {  
+    maintainAspectRatio: false, 
     plugins: {
       legend: {
         display: true,

@@ -53,6 +53,12 @@ h3 {
         }
 }
 
+.tchart-wrapper,
+.dtchart-wrapper,
+.mtchart-wrapper {
+    max-width: 1024px;
+}
+
 /* header styles */
 header {
     display: flex;
@@ -425,6 +431,7 @@ option, select:required:valid {
         "nav content"
         ;
     }
+
     .nav-wrapper {
         flex-direction: column;
         justify-content: flex-start;
@@ -433,5 +440,20 @@ option, select:required:valid {
             height: 36px;
             width: 36px;
         }
+    }
+
+    .daily-mobile {
+        display: flex;
+    }
+    .dtchart-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-right: 1px solid var(--light-gray);
+    }
+    .dtchart-wrapper,
+    .mtchart-wrapper {
+        width: 45%;
+        flex: 1;
     }
 }
