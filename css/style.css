@@ -401,6 +401,12 @@ Initial code From Uiverse.io by Muaz-Aldalil  */
     border: 2px solid rgb(153, 153, 153, 0.4);
     border-radius: 5px;
     color: var(--gray);
+
+    appearance: none;
+    background-image: url(../svgs/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.85rem auto;
 }
 
 select {
@@ -420,7 +426,9 @@ option, select:required:valid {
     gap: 1rem;
     .btn {
         flex: 1;
-
+    }
+    .cancel {
+        background-color: var(--gray);
     }
 }
 
@@ -501,5 +509,10 @@ option, select:required:valid {
             font-weight: 500;
             font-size: 1.3rem;
         }
+    }
+
+    .email-toggle,
+    .profile-toggle {
+        width: 300px;
     }
 }
