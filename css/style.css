@@ -25,7 +25,9 @@ h3 {
     font-weight: 500;
 }
 
-/* General sections styles */
+/* -----------------------
+General sections styles
+----------------------- */
 .border {
     border-top: 1px solid var(--light-gray);
 }
@@ -53,13 +55,9 @@ h3 {
         }
 }
 
-/* .tchart-wrapper,
-.dtchart-wrapper,
-.mtchart-wrapper {
-    max-width: 1100px;
-} */
-
-/* header styles */
+/* -------------
+header styles
+------------- */
 header {
     display: flex;
     justify-content: space-between;
@@ -76,11 +74,12 @@ header {
 
 .bell-container {
     position: relative;
+    cursor: pointer;
     svg {
         fill: var(--white);
         position: relative;
         height: 18px;
-        width: 18px;
+        width: 24px;
         padding-right: 10px;
     }
     span {
@@ -109,15 +108,16 @@ header {
     }
 }
 
-
-/* nav styles */
-
+/* ----------
+nav styles
+---------- */
 .nav-wrapper {
 display: flex;
 justify-content: center;
 padding: 1rem;
 background-color: var(--dark-purple);
     svg {
+        cursor: pointer;
         padding: 1rem 0.8rem;
         fill: var(--white);
         max-width: 60px;
@@ -125,8 +125,9 @@ background-color: var(--dark-purple);
     }
 }
 
-
-/* Dashboard menu style */
+/* --------------------
+Dashboard menu style
+-------------------- */
 .tab-nav {
     display: flex;
     height: 48px;
@@ -158,7 +159,9 @@ background-color: var(--dark-purple);
     font-weight: 300;
 }
 
-/* Traffic chart menu style */
+/* ------------------------
+Traffic chart menu style
+------------------------ */
 .tchart-menu {
     display: flex;
     flex-direction: column;
@@ -190,7 +193,9 @@ background-color: var(--dark-purple);
     background-color: var(--green);
 }
 
-/* Social section style */
+/* --------------------
+Social section style
+-------------------- */
 .facebook,
 .instagram,
 .twitter {
@@ -201,7 +206,6 @@ background-color: var(--dark-purple);
     border: solid 1px var(--light-gray);
     color: var(--dark-purple);
     padding: 1rem;
-    /* height: 100px; */
     margin: 1rem 0px;
     p {
         color: var(--purple);
@@ -236,7 +240,9 @@ background-color: var(--dark-purple);
     }
 }
 
-/* New members section style */
+/* -------------------------
+New members section style
+------------------------- */
 .new-members .member:nth-child(n+3),
 .recent-activity .member:nth-child(n+3) {
     border-top: 1px solid var(--light-gray);
@@ -566,3 +572,32 @@ option, select:required:valid {
 /* -----------
 Bell Animation
 ----------- */
+.bell {
+    transform-origin: 50% 4px;
+    transform-box: fill-box;
+}
+
+.bell-container:hover .bell {
+    animation: shake 3s ease-in-out backwards;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0); }
+    1% { transform: rotate(18deg); }
+    3% { transform: rotate(-16deg); }
+    5% { transform: rotate(22deg); }
+    7% { transform: rotate(-20deg); }
+    9% { transform: rotate(18deg); }
+    11% { transform: rotate(-16deg); }
+    13% { transform: rotate(14deg); }
+    15% { transform: rotate(-12deg); }
+    18% { transform: rotate(10deg); }
+    21% { transform: rotate(-8deg); }
+    24% { transform: rotate(6deg); }
+    27% { transform: rotate(-4deg); }
+    30% { transform: rotate(2deg); }
+    33% { transform: rotate(-1deg); }
+    36% { transform: rotate(1deg); }
+    39% { transform: rotate(0deg); }
+    100% { transform: rotate(0); }
+}
