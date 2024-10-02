@@ -157,6 +157,9 @@ Dashboard menu style
     border-radius: 5px;
     color: var(--white);
     font-weight: 300;
+    span {
+        cursor: pointer;
+    }
 }
 
 /* ------------------------
@@ -260,7 +263,7 @@ New members section style
     }
     p {
         text-align: center;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-weight: 400;
     }
     .email {
@@ -539,8 +542,11 @@ option, select:required:valid {
         display: flex;
         flex-wrap: wrap;
         p {
-         font-size: 0.7rem;
+            font-size: 0.9rem;
         }
+    }
+    .member-activity {
+        gap: 6px;
     }
     .new-members {
         border-right: 1px solid var(--light-gray);
@@ -557,6 +563,7 @@ option, select:required:valid {
     .message-wrapper,
     .setting-wrapper {
         flex: 1;
+        position: relative;
     }
     .setting-wrapper {
         display: flex;
@@ -600,4 +607,31 @@ Bell Animation
     36% { transform: rotate(1deg); }
     39% { transform: rotate(0deg); }
     100% { transform: rotate(0); }
+}
+
+/* -------------------------
+Message User Notification
+------------------------- */
+.send-alert {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 1rem;
+    background-color: var(--purple);
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: 300;
+    transform: translate(-50%, 0);
+    animation: fade 3s ease-in-out forwards;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+    70% {opacity: 1;}
+    100% {opacity: 0;}
 }
