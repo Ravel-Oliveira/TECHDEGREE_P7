@@ -70,6 +70,7 @@ header {
 .acc-wrapper {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .bell-container {
@@ -92,6 +93,7 @@ header {
         background-color: #81c98f;
     }
 }
+
 
 .acc {
     display: flex;
@@ -576,9 +578,9 @@ option, select:required:valid {
     }
 }
 
-/* -----------
-Bell Animation
------------ */
+/* ------------------
+Bell Animation events
+--------------------- */
 .bell {
     transform-origin: 50% 4px;
     transform-box: fill-box;
@@ -607,6 +609,67 @@ Bell Animation
     36% { transform: rotate(1deg); }
     39% { transform: rotate(0deg); }
     100% { transform: rotate(0); }
+}
+
+.popup {
+    flex-direction: column;
+    position: absolute;
+    opacity: 1;
+    gap: 12px;
+    width: 250px;
+    top: 130%;
+    right: 90%;
+    background-color: var(--dark-purple);
+    border-radius: 5px 0px 5px 5px;
+    padding: 8px;
+    animation: pop 0.3s ease-in-out forwards;
+}
+
+.popup::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+    left: 100%;
+    top: 0%;
+    border: 8px solid transparent;
+    border-bottom-color: var(--dark-purple);
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.popup-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 8px;
+    gap: 8px;
+    & div:first-child {
+        color: var(--dark-purple);
+        font-weight: 700;
+        text-align: center;
+        padding: 2px;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background-color: var(--light-gray2);
+        box-shadow: 0px 0px 2px var(--white);
+    }
+    &:hover {
+        background-color: var(--purple);
+    }
+}
+
+.alert-message {
+    position: relative;
+    font-size: 0.7rem;
+    padding: 10px 0px 10px 10px;
+    border-left: 2px solid var(--light-gray);
+}
+
+@keyframes pop {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 /* -------------------------

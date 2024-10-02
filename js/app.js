@@ -3,6 +3,7 @@ const message = document.getElementById('user-message');
 const toggleEmail = document.getElementById('t-email');
 const toggleProfile = document.getElementById('t-profile');
 const timezone = document.getElementById('timezone');
+const bellAlert = document.querySelector('.bell-container');
 let btnSend = document.querySelector('.send');
 let btnSave = document.querySelector('.save');
 let btnCancel = document.querySelector('.cancel');
@@ -105,7 +106,6 @@ function cancelConfig() {
     localStorage.clear();
 }
 
-
 btnSave.addEventListener('click', () => {
     localStorage.setItem('settingConfig', JSON.stringify(getValues()));
 })
@@ -122,5 +122,14 @@ topAlert.addEventListener('click', (evt) => {
     let e = evt.target;
     if (e.tagName === 'SPAN') {
         e.parentElement.style.display = 'none';
+    }
+})
+
+bellAlert.addEventListener('click', () => {
+    const popup = document.querySelector('.popup');
+    if (popup.style.display === 'none') {
+        popup.style.display = 'flex';
+    } else {
+        popup.style.display = 'none';
     }
 })
