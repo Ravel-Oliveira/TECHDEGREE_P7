@@ -257,7 +257,13 @@
                     <div class="message-wrapper border pad">
                         <h3>MESSAGE USER</h3>
                         <div class="message">
-                            <input type="text" id="search" name="search" placeholder="Search User" required>
+                            <input list="users-list" type="text" id="search" name="search" placeholder="Search User" required>
+                            <datalist id="users-list">
+                                <option value="Victoria Chambers"></option>
+                                <option value="Dale Byrd"></option>
+                                <option value="Dawn Wood"></option>
+                                <option value="Dan Oliver"></option>
+                            </datalist>
                             <textarea name="user-message" id="user-message" placeholder="Message for user" rows="5"></textarea>
                             <button class="btn send" type="submit">SEND</button>
                         </div>
