@@ -25,6 +25,15 @@ h3 {
     font-weight: 500;
 }
 
+a {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+#home {
+    fill: var(--white);
+}
 /* -----------------------
 General sections styles
 ----------------------- */
@@ -114,16 +123,17 @@ header {
 nav styles
 ---------- */
 .nav-wrapper {
-display: flex;
-justify-content: center;
-padding: 1rem;
-background-color: var(--dark-purple);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--dark-purple);
     svg {
         cursor: pointer;
         padding: 1rem 0.8rem;
         fill: var(--white);
         max-width: 60px;
         max-height: 60px;
+        pointer-events: none;
     }
 }
 
